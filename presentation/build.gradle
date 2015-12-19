@@ -1,0 +1,96 @@
+/*
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "com.ovent.presentation"
+        minSdkVersion 15
+        targetSdkVersion 15
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:23.1.0'
+}
+*/
+apply plugin: "com.android.application"
+apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: "io.fabric"
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+        versionCode globalConfiguration.getAt("androidVersionCode")
+        multiDexEnabled true
+    }
+
+
+    packagingOptions {
+        exclude "LICENSE.txt"
+        exclude "META-INF/NOTICE"
+        exclude "META-INF/LICENSE"
+        exclude 'META-INF/LICENSE.txt'
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/services/javax.annotation.processing.Processor"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable "InvalidPackage"  // Some libraries have issues with this
+        disable "OldTargetApi"// Due to Robolectric that modifies the manifest when running tests
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+    jcenter()
+   // maven { url 'https://maven.fabric.io/public' }
+   // maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':domain')
+    compile project(':data')
+
+    compile presentationDependencies.multidex
+    compile presentationDependencies.appCompat7
+    compile presentationDependencies.cardViewV7
+    compile presentationDependencies.design
+    compile presentationDependencies.butterknife
+    compile presentationDependencies.picasso
+    compile presentationDependencies.androidSupportV4
+    compile presentationDependencies.recyclerView
+    compile presentationDependencies.playServicesPlus
+    compile presentationDependencies.circularImageView
+    compile presentationDependencies.googleMapView
+    compile presentationDependencies.jodaTimeAndroid
+    compile presentationDependencies.rxAndroid
+    compile presentationDependencies.rxJava
+   // compile presentationDependencies.crashlytics
+}
