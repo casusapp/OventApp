@@ -69,8 +69,8 @@ public class UserEntity extends RealmObject {
         this.password = password;
     }*/
 
-    public UserEntity(final String email, final String password){
-        this.email = email;
+    public UserEntity(final String phone, final String password){
+        this.phoneNumber = phone;
         this.password = password;
     }
 

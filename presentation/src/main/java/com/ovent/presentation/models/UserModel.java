@@ -22,8 +22,8 @@ public final class UserModel implements Parcelable {
     private String mAuthKey;
     public UserModel(){}
 
-    public UserModel(final String email,final String password){
-        mEmail = email;
+    public UserModel(final String phone,final String password){
+        mPhoneNumber = phone;
         mPassword = password;
     }
 

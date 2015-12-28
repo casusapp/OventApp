@@ -14,7 +14,7 @@ public final class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        addFragment(R.id.activity_login, LoginFragment.GetInstance(), LoginFragment.TAG);
+        addFragment(R.id.activity_login, LoginFragment.newInstance(), LoginFragment.TAG);
     }
 
 }

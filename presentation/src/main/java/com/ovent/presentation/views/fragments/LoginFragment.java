@@ -23,7 +23,7 @@ import rx.Subscriber;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class LoginFragment extends BaseFragment {
+public final class LoginFragment extends BaseFragment {
 
     public static String TAG = "##LoginFragment##";
     private LoginPresenter mLoginPresenter;
@@ -31,7 +31,7 @@ public class LoginFragment extends BaseFragment {
     public LoginFragment() {
     }
 
-    public static LoginFragment GetInstance() {
+    public static LoginFragment newInstance() {
         return new LoginFragment();
     }
 
@@ -59,7 +59,6 @@ public class LoginFragment extends BaseFragment {
     private void doLogin(){
         final ProgressDialog progressDialog = ProgressDialog.show(getActivity(), "", "Logging in..");
         progressDialog.setCancelable(false);
-        mLoginPresenter = new LoginPresenter();
         mLoginPresenter.loginUserByEmail(new User(mPhoneNumber.getText().toString().trim(),
                 mPassword.getText().toString().trim()), new Subscriber<User>() {
             @Override
@@ -70,13 +69,15 @@ public class LoginFragment extends BaseFragment {
             @Override
             public void onError(Throwable e) {
            //     showErrorDialog(e);
+                Log.d(TAG,"error "+e.getMessage());
                 progressDialog.dismiss();
             }
 
             @Override
             public void onNext(User user) {
                 Log.d(TAG, " Login Success " + user.toString());
-                Toast.makeText(getActivity(),"welcome!! your mobile number is: "+user.getPhoneNumber(),Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+                Toast.makeText(getActivity(),"welcome!! your mobile number is: " + user.getPhoneNumber(),Toast.LENGTH_SHORT).show();
                /* mLoginPresenter.saveUserLocally(user, new Subscriber<User>() {
                     @Override
                     public void onCompleted() {

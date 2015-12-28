@@ -45,8 +45,8 @@ public final class User {
 
     }
 
-    public User(final String email, final String password) {
-        mEmailAddress = email;
+    public User(final String phone, final String password) {
+        mPhoneNumber = phone;
         mPassword = password;
     }
 

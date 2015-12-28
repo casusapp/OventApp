@@ -17,8 +17,15 @@ public interface UserApis {
             "Content-Type : application/json",
             "Accept : application/json"
     })
-    @POST("192.168.1.4/loginUser:8080")
+    @POST(Urls.LOGIN_USER)
     Observable<UserEntity> loginUserByEmail(@Body UserEntity userEntity);
+
+    @Headers({
+            "Content-Type : application/json",
+            "Accept : application/json"
+    })
+    @POST(Urls.CREATE_USER)
+    Observable<UserEntity> signup(@Body UserEntity userEntity);
 
 
 

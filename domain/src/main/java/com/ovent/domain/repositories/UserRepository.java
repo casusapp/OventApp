@@ -10,4 +10,5 @@ import rx.Observable;
 
 public interface UserRepository {
     Observable<User> loginByEmail(final User user);
+    Observable<User> signup(final String name,final String phone,final String password);
 }

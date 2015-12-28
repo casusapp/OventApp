@@ -8,12 +8,12 @@ import com.ovent.data.BuildConfig;
 public final class Urls {
 
     // Base url for String
-    public static final String STAGING_BASE_URL = "http://ovent.herokuapp.com/api/v1/";
+    public static final String STAGING_BASE_URL = "http://ovent.herokuapp.com/";
 
     /** Base url for production
      * for now this is same as @STAGING_BASE_URL
      */
-    public static final String PRODUCTION_BASE_URL = "http://ovent.herokuapp.com/api/v1/";
+    public static final String PRODUCTION_BASE_URL = "http://ovent.herokuapp.com/";
 
     /**
      * @return STAGING_BASE_URL
@@ -29,6 +29,9 @@ public final class Urls {
         return PRODUCTION_BASE_URL;
     }
 
+    public static final String LOGIN_USER = "loginuser";
+
+    public static final String CREATE_USER = "user";
     /**
      * Helper function to get BASE_URL. Consumed by retrofit
      * @return base url end point

@@ -26,9 +26,23 @@ public final class UserRepository implements com.ovent.domain.repositories.UserR
         return mUserApis.loginUserByEmail(userEntity).map(new Func1<UserEntity, User>() {
             @Override
             public User call(UserEntity userEntity) {
-                userEntity.setIsFacebook(false);
-                userEntity.setIsGplus(false);
-                userEntity.setIsLoggedIn(true);
+           //     userEntity.setIsFacebook(false);
+            //    userEntity.setIsGplus(false);
+            //    userEntity.setIsLoggedIn(true);
+                return UserMapper.transform(userEntity);
+            }
+        });
+    }
+
+    @Override
+    public Observable<User> signup(final String name,final String phone,final String password) {
+        final UserEntity userEntity = new UserEntity();
+        userEntity.setName(name);
+        userEntity.setPassword(password);
+        userEntity.setPhoneNumber(phone);
+        return mUserApis.signup(userEntity).map(new Func1<UserEntity, User>() {
+            @Override
+            public User call(UserEntity userEntity) {
                 return UserMapper.transform(userEntity);
             }
         });
