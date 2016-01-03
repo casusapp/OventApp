@@ -23,8 +23,6 @@ public class UserEntity extends RealmObject {
     private String email;
     @SerializedName("phone_number")
     private String phoneNumber;
-    @SerializedName("driving_licence_url")
-    private String drivingLicenceUrl;
 
     @SerializedName("address")
     private String address;
@@ -56,9 +54,6 @@ public class UserEntity extends RealmObject {
     @SerializedName("facebook_user_id")
     private String facebookUserId;
     private boolean isLoggedIn;
-
-    @SerializedName("site_id")
-    private String siteId;
 
     public UserEntity(){
 
@@ -109,9 +104,7 @@ public class UserEntity extends RealmObject {
         return facebookToken;
     }
 
-    public String getDrivingLicenceUrl(){
-        return drivingLicenceUrl;
-    }
+
 
     public boolean isEmailVerified(){
         return isEmailVerified;
@@ -134,7 +127,7 @@ public class UserEntity extends RealmObject {
     public String getEmailAddress() {
         return emailAddress;
     }
-    public String getSiteId(){return siteId;}
+
     public String getAddress(){
         return address;
     }
@@ -165,13 +158,6 @@ public class UserEntity extends RealmObject {
 
     public void setPhoneNumber(String phone_number) {
         this.phoneNumber = phone_number;
-    }
-
-    public void setDrivingLicenceUrl(String drivingLicenceUrl) {
-        this.drivingLicenceUrl = drivingLicenceUrl;
-        // TODO..  keep this for now.. as server needs DL number
-        // later on remove this after actually integrating s3.
-        this.drivingLicenceUrl = "http://myfunnyindia.com/wp-content/uploads/2014/11/rajnikanth-driving-license.jpg";
     }
 
     public void setProfilePicUrl(String profilePicUrl) {
@@ -262,9 +248,6 @@ public class UserEntity extends RealmObject {
         this.emailAddress = emailAddress;
     }
 
-    public void setSiteId(String siteId){
-        this.siteId = siteId;
-    }
 
     public void setAddress(String address){
         this.address = address;

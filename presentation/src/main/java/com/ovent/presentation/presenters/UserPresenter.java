@@ -23,17 +23,17 @@ public final class UserPresenter extends Presenter{
         mSubscriptions.add(new SignUp(name,phone,password,mUserRepository,mThreadExecutor,mPostExecutionThread).execute(subscriber));
     }
     @Override
-    void resume() {
-
+   public void resume() {
+        cancelRunningUseCases();
     }
 
     @Override
-    void pause() {
-
+   public void pause() {
+        cancelRunningUseCases();
     }
 
     @Override
-    void destroy() {
-
+    public void destroy() {
+        cancelRunningUseCases();
     }
 }

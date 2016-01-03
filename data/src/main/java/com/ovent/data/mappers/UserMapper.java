@@ -27,7 +27,6 @@ public final class UserMapper {
         userEntity.setPassword(user.getPassword());
         userEntity.setLicenseNumber(user.getLicenseNumber());
         userEntity.setPhoneNumber(user.getPhoneNumber());
-        userEntity.setDrivingLicenceUrl(user.getDrivingLicenseUrl());
         userEntity.setFacebookToken(user.getFacebookToken());
         userEntity.setFacebookUserId(user.getFacebookId());
         userEntity.setProfilePicUrl(user.getProfilePicUrl());
@@ -36,7 +35,6 @@ public final class UserMapper {
         userEntity.setGooglePlusToken(user.getGooglePlusToken());
         userEntity.setIsEmailVerified(user.isEmailVerified());
         userEntity.setIsPhoneVerified(user.isPhoneVerified());
-        userEntity.setSiteId(user.getSiteId());
         userEntity.setId(user.getId());
         userEntity.setName(user.getName());
         userEntity.setEmail(user.getEmail());
@@ -58,7 +56,7 @@ public final class UserMapper {
         user.setPassword(userEntity.getPassword());
         user.setLicenseNumber(userEntity.getLicenseNumber());
         user.setPhoneNumber(userEntity.getPhoneNumber());
-        user.setDrivingLicenseUrl(userEntity.getDrivingLicenceUrl());
+
         user.setFacebookToken(userEntity.getFacebookToken());
         user.setFacebookId(userEntity.getFacebookUserId());
         user.setProfilePicUrl(userEntity.getProfilePicUrl());
@@ -67,7 +65,7 @@ public final class UserMapper {
         user.setGooglePlusToken(userEntity.getGooglePlusToken());
         user.setIsEmailVerified(userEntity.isEmailVerified());
         user.setIsPhoneVerified(userEntity.isPhoneVerified());
-        user.setSiteId(userEntity.getSiteId());
+
         user.setId(userEntity.getId());
         user.setEmail(userEntity.getEmail());
         user.setAddress(userEntity.getAddress());
@@ -96,8 +94,6 @@ public final class UserMapper {
             userEntity.setPassword(user.getPassword());
         if (user.getPhoneNumber() != null)
             userEntity.setPhoneNumber(user.getPhoneNumber());
-        if (user.getDrivingLicenseUrl() != null)
-            userEntity.setDrivingLicenceUrl(user.getDrivingLicenseUrl());
         userEntity.setIsFacebook(user.isFacebook());
         userEntity.setIsGplus(user.isGplus());
         if (user.getFacebookId() != null)
@@ -110,8 +106,6 @@ public final class UserMapper {
             user.setGooglePlusToken(user.getGooglePlusToken());
         if (user.getAddress() != null)
             userEntity.setAddress(user.getAddress());
-        if (user.getSiteId() != null)
-            userEntity.setSiteId(user.getSiteId());
         if (user.getEmail() != null)
             userEntity.setEmail(user.getEmail());
         if (user.getId() != null)
@@ -121,9 +115,6 @@ public final class UserMapper {
         userEntity.setIsEmailVerified(user.isEmailVerified());
         userEntity.setIsPhoneVerified(user.isPhoneVerified());
 
-        if (user.getSiteId() != null) {
-            userEntity.setSiteId(user.getSiteId());
-        }
-        realm.commitTransaction();
+                realm.commitTransaction();
     }
 }

@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.ovent.domain.User;
 import com.ovent.presentation.R;
 import com.ovent.presentation.presenters.LoginPresenter;
+import com.ovent.presentation.utils.Intents;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -45,6 +46,11 @@ public final class LoginFragment extends BaseFragment {
     @OnClick(R.id.login)
     void login(){
         doLogin();
+    }
+
+    @OnClick(R.id.back)
+    void back(){
+        getActivity().finish();
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,6 +84,8 @@ public final class LoginFragment extends BaseFragment {
                 Log.d(TAG, " Login Success " + user.toString());
                 progressDialog.dismiss();
                 Toast.makeText(getActivity(),"welcome!! your mobile number is: " + user.getPhoneNumber(),Toast.LENGTH_SHORT).show();
+                startActivity(Intents.getHomeIntent());
+                getActivity().finish();
                /* mLoginPresenter.saveUserLocally(user, new Subscriber<User>() {
                     @Override
                     public void onCompleted() {
@@ -102,5 +110,11 @@ public final class LoginFragment extends BaseFragment {
             }
         });
 
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mLoginPresenter.pause();
     }
 }

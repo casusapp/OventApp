@@ -23,9 +23,15 @@
 
     <!-- used in app -->
 
-    <string name ="login_title">Login</string>
+    <string name="login_title">Login</string>
     <string name="signup_title">SignUp</string>
     <string name="login_button">LOGIN</string>
     <string name="signup_button">SIGNUP</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_create_event">CreateEvent</string>
+    <string name="new_event">New Event</string>
+    <string name="save">Save</string>
+    <string name="event_public">Public</string>
 
 </resources>
