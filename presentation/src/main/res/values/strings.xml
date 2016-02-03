@@ -22,7 +22,7 @@
     <string name="title_activity_sign_up">SignUp</string>
 
     <!-- used in app -->
-
+<string name="com_appboy_api_key">5207b36c-788a-4aec-9b8d-f36d74f7c3c2</string>
     <string name="login_title">Login</string>
     <string name="signup_title">SignUp</string>
     <string name="login_button">LOGIN</string>
@@ -33,5 +33,8 @@
     <string name="new_event">New Event</string>
     <string name="save">Save</string>
     <string name="event_public">Public</string>
-
+    <string name="invite_people">Invite People</string>
+    <string name="title_activity_contacts_list">ContactsListActivity</string>
+    <string name="title_contacts">Add Contacts</string>
+    <string name="ok">OK</string>
 </resources>

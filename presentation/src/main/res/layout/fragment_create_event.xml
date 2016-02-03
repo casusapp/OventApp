@@ -83,7 +83,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/black" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/name_layout"
@@ -102,8 +102,8 @@
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:inputType="textCapWords"
-            android:hint="Name"
-            android:textColor = "#000000"
+            android:hint="Event Name"
+            android:textColor = "@color/black"
             android:theme="@style/AppTheme.EditText"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -115,7 +115,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/black" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/description_layout"
@@ -134,7 +134,7 @@
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:hint="Description"
-            android:textColor = "#000000"
+            android:textColor = "@color/black"
             android:theme="@style/AppTheme.EditText"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -146,7 +146,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/black" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/note_layout"
@@ -165,7 +165,7 @@
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:hint="Add note"
-            android:textColor = "#000000"
+            android:textColor = "@color/black"
             android:theme="@style/AppTheme.EditText"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -177,7 +177,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/black" />
 
 
     <android.support.design.widget.TextInputLayout
@@ -197,7 +197,7 @@
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:hint="Category"
-            android:textColor = "#000000"
+            android:textColor = "@color/black"
             android:theme="@style/AppTheme.EditText"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -209,7 +209,38 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/black" />
+
+
+        <com.android.ex.chips.RecipientEditTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/invite_people"
+            android:id="@+id/invite_people"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp"
+            android:theme="@style/AppTheme.EditText"/>
+
+
+    <MultiAutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/multicomplete"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:text="Add Contact"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"/>
+
 
 
 </LinearLayout>
