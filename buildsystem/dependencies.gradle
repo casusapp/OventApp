@@ -92,6 +92,6 @@ ext {
             rebound           : "com.facebook.rebound:rebound:${reboundVersion}",
             crashlytics       : "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}",
             materialDialogs   : "com.afollestad.material-dialogs:commons:${materialDialogVersion}",
-            chipView           : "com.klinkerapps:android-chips:${chipViewAndroidVersion}"
+            chipView          : "com.klinkerapps:android-chips:${chipViewAndroidVersion}"
     ]
 }

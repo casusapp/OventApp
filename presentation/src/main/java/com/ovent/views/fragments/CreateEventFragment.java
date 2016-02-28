@@ -64,9 +64,6 @@ public final class CreateEventFragment extends BaseFragment {
     @Bind(R.id.add)
     Button mAdd;
 
-    @Bind(R.id.multicomplete)
-    MultiAutoCompleteTextView mAutoComplete;
-
 
     public CreateEventFragment() {
         // Required empty public constructor
@@ -85,6 +82,7 @@ public final class CreateEventFragment extends BaseFragment {
         attachListeners();
         mInvitePeopleFromContacts.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         mInvitePeopleFromContacts.setAdapter(new BaseRecipientAdapter(BaseRecipientAdapter.QUERY_TYPE_PHONE, getActivity()));
+        Log.d(TAG,""+ mInvitePeopleFromContacts.getAdapter().getCount());
         return view;
     }
 
@@ -122,7 +120,7 @@ public final class CreateEventFragment extends BaseFragment {
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG,"auto complete text :"+ mAutoComplete.getText());
+
                 saveEvent();
             }
         });
@@ -139,7 +137,9 @@ public final class CreateEventFragment extends BaseFragment {
 
     private void saveEvent(){
         DrawableRecipientChip[] chips = mInvitePeopleFromContacts.getSortedRecipients();
-        Log.d(TAG,"size of chip view :"+chips.toString());
+       for(int i = 0;i<chips.length;i++){
+           Log.d(TAG,""+chips[i].getEntry().getContactId());
+       }
     }
 
 }

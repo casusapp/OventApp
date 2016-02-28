@@ -13,7 +13,7 @@ public final class AddressEntity {
     @SerializedName("long")
     private String mLong;
 
-
+public AddressEntity(){}
     public String getLat() {
         return mLat;
     }

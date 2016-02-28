@@ -11,12 +11,20 @@ public final class EventEntity {
 
     @SerializedName("name")
     private String mName;
+    @SerializedName("title")
+    private String mTitle;
     @SerializedName("category")
     private String mCategory;
-    @SerializedName("description")
+    @SerializedName("desc")
     private String mDesscription;
-    @SerializedName("address")
+    @SerializedName("venue")
     private AddressEntity mAddress;
+    @SerializedName("start_time")
+    private String mStartTime;
+    @SerializedName("end_time")
+    private String mEndTime;
+
+    public EventEntity(){}
 
     public String getName() {
         return mName;
@@ -48,5 +56,29 @@ public final class EventEntity {
 
     public void setAddress(AddressEntity mAddress) {
         this.mAddress = mAddress;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+
+    public String getStartTime() {
+        return mStartTime;
+    }
+
+    public void setStartTime(String mStartTime) {
+        this.mStartTime = mStartTime;
+    }
+
+    public String getEndTime() {
+        return mEndTime;
+    }
+
+    public void setEndTime(String mEndTime) {
+        this.mEndTime = mEndTime;
     }
 }

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="com_appboy_push_gcm_messaging_registration_enabled">true</bool>
-    <string name="com_appboy_push_gcm_sender_id">215631867957</string>
-    <drawable name="com_appboy_push_small_notification_icon">@drawable/ic_drawer</drawable>
-</resources>

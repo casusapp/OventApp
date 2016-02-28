@@ -5,17 +5,11 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
-import com.appboy.Appboy;
+import com.onesignal.OneSignal;
 import com.ovent.data.converters.GsonConverter;
 import com.ovent.data.retrofit.RetrofitFactory;
 import com.ovent.data.utils.RealmFactory;
 import com.ovent.views.activities.HomeActivity;
-import com.parse.Parse;
-import com.parse.ParseException;
-import com.parse.ParseInstallation;
-import com.parse.SaveCallback;
-
-
 import net.danlew.android.joda.JodaTimeAndroid;
 
 /**
@@ -33,9 +27,7 @@ public class Ovent extends MultiDexApplication {
         RealmFactory.Init(getApplicationContext());
         GsonConverter.Init();
         RetrofitFactory.initRetrofitService();
-
-        Appboy.configure(getApplicationContext(),getString(R.string.com_appboy_api_key));
-
+        OneSignal.startInit(this).init();
     }
     @Override
     protected void attachBaseContext(Context base) {

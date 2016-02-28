@@ -78,13 +78,14 @@ public final class ContactsListFragment extends BaseFragment {
         mContactsList = new ArrayList<>();
         final ArrayList<String> nameKey = new ArrayList<>();
 
-        while (contacts.moveToNext()) {
-            String name = contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-            String phone = contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-            map.put(name, phone);
-            nameKey.add(name);
-            mContactsList.add(map);
-        }
+
+            while (contacts.moveToNext()) {
+                String name = contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                String phone = contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                map.put(name, phone);
+                nameKey.add(name);
+                mContactsList.add(map);
+            }
 
         mAdapter.setItemsList(mContactsList, nameKey);
     }

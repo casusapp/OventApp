@@ -13,6 +13,7 @@ import org.joda.time.DateTime;
 public final class EventModel implements Parcelable{
 
     private String mName;
+    private String mTitle;
     private String mDescription;
     private String mCategory;
     private AddressModel mAddress;
@@ -29,7 +30,7 @@ public final class EventModel implements Parcelable{
         mName = in.readString();
         mDescription = in.readString();
         mCategory = in.readString();
-
+        mTitle = in.readString();
     }
 
 
@@ -55,6 +56,7 @@ public final class EventModel implements Parcelable{
         parcel.writeString(mName);
         parcel.writeString(mDescription);
         parcel.writeString(mCategory);
+        parcel.writeString(mTitle);
     }
 
     public String getName() {
@@ -87,5 +89,25 @@ public final class EventModel implements Parcelable{
 
     public void setAddress(AddressModel mAddress) {
         this.mAddress = mAddress;
+    }
+
+    public void setTitle(String title){this.mTitle = title;}
+
+    public String getTitle(){return this.mTitle;}
+
+    public DateTime getStartTime() {
+        return mStartTime;
+    }
+
+    public void setStartTime(DateTime mStartTime) {
+        this.mStartTime = mStartTime;
+    }
+
+    public DateTime getEndTime() {
+        return mEndTime;
+    }
+
+    public void setEndTime(DateTime mEndTime) {
+        this.mEndTime = mEndTime;
     }
 }
