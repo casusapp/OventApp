@@ -9,6 +9,7 @@ import com.onesignal.OneSignal;
 import com.ovent.data.converters.GsonConverter;
 import com.ovent.data.retrofit.RetrofitFactory;
 import com.ovent.data.utils.RealmFactory;
+import com.ovent.receiver.NotificationHandler;
 import com.ovent.views.activities.HomeActivity;
 import net.danlew.android.joda.JodaTimeAndroid;
 
@@ -27,7 +28,9 @@ public class Ovent extends MultiDexApplication {
         RealmFactory.Init(getApplicationContext());
         GsonConverter.Init();
         RetrofitFactory.initRetrofitService();
-        OneSignal.startInit(this).init();
+        OneSignal.startInit(this)
+                .setNotificationOpenedHandler(new NotificationHandler(this))
+                .init();
     }
     @Override
     protected void attachBaseContext(Context base) {

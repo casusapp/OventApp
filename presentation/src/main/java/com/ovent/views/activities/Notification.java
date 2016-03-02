@@ -2,31 +2,23 @@ package com.ovent.views.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.ovent.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class Notification extends Activity {
-    public static boolean mActive=false;
+    private static String TAG = "##Notification##";
+    @Bind(R.id.notification)
+    TextView mNotification;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mActive= true;
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mActive= false;
-    }
-
-    public static boolean isActive(){
-        return mActive;
+        ButterKnife.bind(this);
+        if(getIntent().getStringExtra("message")!=null)
+            mNotification.setText(getIntent().getStringExtra("message"));
     }
 }
