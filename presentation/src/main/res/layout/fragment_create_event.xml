@@ -1,11 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.ovent.presentation.views.fragments.CreateEventFragment">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -17,71 +17,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:src="@drawable/back"/>
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:textSize="16sp"
-            android:text="@string/new_event"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/white"/>
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:padding="12dp"
+            android:text="@string/new_event"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="@string/save"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"/>
+            android:textSize="16sp" />
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
 
 
     </LinearLayout>
 
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/event_type"
-          android:text="@string/event_public"
-          android:padding="16dp"
-          android:layout_marginTop="10dp"
-          android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/event_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:text="@string/event_public"
+            android:textSize="14sp" />
 
-      <android.support.v7.widget.SwitchCompat
-          android:id="@+id/toggle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="end"
-          android:layout_alignParentEnd="true"
-          android:layout_alignParentRight="true"
-          android:layout_marginTop="10dp"
-          android:padding="16dp"/>
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:padding="16dp" />
 
 
-  </RelativeLayout>
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="2dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:alpha="0.5"
         android:background="@color/black" />
 
@@ -89,8 +89,8 @@
         android:id="@+id/name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="10dp"
         app:hintTextAppearance="@style/TextInputLayoutPurple">
 
@@ -99,21 +99,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:imeOptions="actionNext"
-            android:singleLine="true"
-            android:inputType="textCapWords"
             android:hint="Event Name"
-            android:textColor = "@color/black"
-            android:theme="@style/AppTheme.EditText"/>
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:theme="@style/AppTheme.EditText" />
 
     </android.support.design.widget.TextInputLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="2dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:alpha="0.5"
         android:background="@color/black" />
 
@@ -121,8 +121,8 @@
         android:id="@+id/description_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="15dp"
         app:hintTextAppearance="@style/TextInputLayoutPurple">
 
@@ -131,20 +131,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:hint="Description"
             android:imeOptions="actionNext"
             android:singleLine="true"
-            android:hint="Description"
-            android:textColor = "@color/black"
-            android:theme="@style/AppTheme.EditText"/>
+            android:textColor="@color/black"
+            android:theme="@style/AppTheme.EditText" />
 
     </android.support.design.widget.TextInputLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="2dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:alpha="0.5"
         android:background="@color/black" />
 
@@ -152,40 +152,108 @@
         android:id="@+id/note_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="15dp"
         app:hintTextAppearance="@style/TextInputLayoutPurple">
+
 
         <EditText
             android:id="@+id/add_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:hint="Add note"
             android:imeOptions="actionNext"
             android:singleLine="true"
-            android:hint="Add note"
-            android:textColor = "@color/black"
-            android:theme="@style/AppTheme.EditText"/>
+            android:textColor="@color/black"
+            android:theme="@style/AppTheme.EditText" />
 
     </android.support.design.widget.TextInputLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="2dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:alpha="0.5"
         android:background="@color/black" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:textAppearance="@style/TextViewStyle"
+        android:layout_marginTop="25dp"
+        android:text="Time"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_date"
+            android:layout_alignParentStart="true"
+           android:textAppearance="@style/TextViewStyle"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_time"
+           android:textAppearance="@style/TextViewStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_date"
+            android:textColor="@color/primaryText"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_time"
+            android:textColor="@color/primaryText"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:layout_marginTop="2dp"
+        android:alpha="0.5"
+        android:background="@color/black" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="15dp"
         app:hintTextAppearance="@style/TextInputLayoutPurple">
 
@@ -194,47 +262,50 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:hint="Category"
             android:imeOptions="actionNext"
             android:singleLine="true"
-            android:hint="Category"
-            android:textColor = "@color/black"
-            android:theme="@style/AppTheme.EditText"/>
+            android:textColor="@color/black"
+            android:theme="@style/AppTheme.EditText" />
 
     </android.support.design.widget.TextInputLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
         android:layout_marginTop="2dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:alpha="0.5"
         android:background="@color/black" />
 
 
-        <com.android.ex.chips.RecipientEditTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/invite_people"
-            android:id="@+id/invite_people"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="25dp" />
+    <com.android.ex.chips.RecipientEditTextView
+        android:id="@+id/invite_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:layout_marginTop="25dp"
+        android:hint="@string/invite_people" />
 
 
-
-
-    <Button
+    <ExpandableListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/add"
-        android:text="Add Contact"
-        android:background="@color/colorPrimary"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="15dp"
-        android:textSize="12sp"/>
+        android:id="@+id/exapndable_list">
 
+    </ExpandableListView>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorPrimary"
+        android:text="Add Contact"
+        android:textSize="12sp" />
 
 
 </LinearLayout>

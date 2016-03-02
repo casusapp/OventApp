@@ -22,7 +22,6 @@
     <string name="title_activity_sign_up">SignUp</string>
     <string name="gcm_senderId">215631867957</string>
     <!-- used in app -->
-    <string name="com_appboy_api_key">5207b36c-788a-4aec-9b8d-f36d74f7c3c2</string>
     <string name="login_title">Login</string>
     <string name="signup_title">SignUp</string>
     <string name="login_button">LOGIN</string>
@@ -37,4 +36,8 @@
     <string name="title_activity_contacts_list">ContactsListActivity</string>
     <string name="title_contacts">Add Contacts</string>
     <string name="ok">OK</string>
+
+    <string name="connectivity_error_title">Connectivity Error</string>
+    <string name="connectivity_error_message">No internet</string>
+    <string name="try_again">Try again</string>
 </resources>

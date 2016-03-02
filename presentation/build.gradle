@@ -48,7 +48,7 @@ repositories {
     mavenCentral()
     maven { url "http://appboy.github.io/appboy-android-sdk/sdk" }
     // maven { url 'https://maven.fabric.io/public' }
-    // maven { url "https://jitpack.io" }
+     maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -72,8 +72,12 @@ dependencies {
     compile presentationDependencies.rxJava
     compile presentationDependencies.chipView
     compile 'com.android.support:support-v13:23.1.0'
-
+    compile presentationDependencies.materialDatePicker
     compile 'com.onesignal:OneSignal:2.+@aar'
+    compile presentationDependencies.reactiveNetwork
+    compile('com.afollestad.material-dialogs:commons:0.8.2.0@aar') {
+        transitive = true
+    }
    // compile "me.henrytao:smooth-app-bar-layout:1.0.4"
   //  compile files('libs/Parse-1.12.0.jar')
 }
